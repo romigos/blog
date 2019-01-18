@@ -1,4 +1,4 @@
 <h1>Все статьи</h1>
 <% @posts.each do |post| %>
-  <h2><%= post.title %></h2>
+  <h2><%= link_to post.title, post_path(post) %></h2>
 <% end %>
