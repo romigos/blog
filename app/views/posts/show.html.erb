@@ -1,6 +1,4 @@
 <h1><%= @post.title %></h1>
-<%= link_to 'Изменить', edit_post_path(@post) %>
-
-<%= link_to 'Удалить', post_path(@post), method: :delete, data: { confirm: 'Ви уверени?'} %>
-
+<%= link_to 'Змінити', edit_post_path(@post) %>
+<%= link_to 'Видалити', post_path(@post), method: :delete, data: { confirm: 'Ви впевнені?'} %>
 <p><%= @post.body %></p>

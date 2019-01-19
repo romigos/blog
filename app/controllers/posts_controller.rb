@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   def index
     @posts = Post.all
@@ -11,14 +13,14 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-    def create
+  def create
     @post = Post.new(post_params)
     if @post.save
       redirect_to @post
     else
       render :new
     end
-  end
+end
 
   def edit
     @post = Post.find(params[:id])
