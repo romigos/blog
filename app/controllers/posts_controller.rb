@@ -6,9 +6,6 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-  def show
-  end
-
   def new
     @post = Post.new
   end
@@ -22,17 +19,13 @@ class PostsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
   def update
     if @post.update(post_params)
       redirect_to @post
     else
       render :edit
-
     end
-  end
+ end
 
   def destroy
     @post.destroy
