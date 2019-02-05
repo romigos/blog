@@ -9,7 +9,8 @@
       <%= link_to 'Видалити', post_path(@post), method: :delete, data: { confirm: 'Ви впевнені?' } %>
     </small>
   </section>
-  <section class='post-summary'>
+  <section class='post-body'>
+    <%=image_tag @post.image.url(:large), class: "img-show" if @post.image? %>
     <%= @post.body %>
   </section>
 </article>

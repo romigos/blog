@@ -1,6 +1,6 @@
 <article class='post'>
   <section class='post-head'>
-    <h1><%= link_to post.title, post_path(post) %></h1>
+    <h2><%= link_to post.title, post_path(post) %></h2>
     <small>
       <time> <%= post.created_at.to_date.strftime('%d %B, %Y') %></time>
       |
@@ -9,7 +9,8 @@
       <%= link_to 'Видалити', post_path(post), method: :delete, data: { confirm: 'Ви впевнені?'} %>
     </small>
   </section>
-  <section class='post-summary'>
+  <section class='post-summary clearfix'>
+    <%= image_tag post.image.url(:thumb), class: 'img-thumbnail thumb' if post.image? %>
     <%= post.summary %><br>
     <%= post.body %>
   </section>
