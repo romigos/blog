@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-	add_flash_types :success, :danger, :info, :warning
+  protect_from_forgery prepend: true
+  add_flash_types :success, :danger, :info, :warning
 end
